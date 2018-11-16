@@ -1,0 +1,18 @@
+const PHRASES = [
+    "Let's go to the mall everybody! Go! C'mon Jessica, C'mon Tori let's go to the mall you won't be sorry. Put on your jelly-bracelets and your cool graffiti-coat at the mall havin' fun is what its all about. I haven't done my homework yet... That's okay. And you know how my parents get... Whatever. I don't care 'cause all my friends are gonna be there Everybody come and play Throw every last care away Let's go to the mall... Today. Chloe, mouse, I love it. There's this boy I like Met him at the food court. He's got hair like Brettsy and he does jumps on his skateboard. I hope he asks me out take me to my favourite spot. It'll be just him and me. But don't forget the robot. Dad says I'm too young to date. Lame. But baby I don't wanna wait. I don't wanna wait. Let's do it. That's okay I'm gonna rock your body anyway. I'm gonna rock your body till the Canada Day. Everybody come and play Throw every last care away Let's go to the mall... Today. I went to the mall with a couple of friends. I had a whole week's allowance to spend. I want hoop earrings and a Benetton shirt. We came here to shop and we came here to flirt. I turned around and who should I see? Prime Minister Brian Mulrooney. He said, Young lady I don't approve. So I had to get down and bust trees sweet moves. Hey Fred... c'mon... let's go to the mall! Let's go to the mall everybody! Everybody come and play Throw every last care away Let's go to the mall... Today. Everybody loves the mall! Everybody come and play Yeah! Throw every last care away I love my hoop earrings. Let's go to the mall... Today. Today. Let's go to the mall.",
+    "The stars are falling from the sky And you're the reason why The moon is shining on your face And I finally think it's found its place Cause maybe, baby, I just wanna do you, do you Do you wanna do me, do me Underneath the moonlight The moonlight tonight? And now we're hiding in my car I let you see my scars Escape the dark for just one night Your heart makes me explode with light Baby, maybe Maybe I will steal you, steal you Just so I can feel you, feel you Maybe that will heal you, heal you On the inside Underneath the willow tree Wearing nothing else but me Babe, I just wanna do you Do you wanna do me Underneath the moonlight? Hayley, Hayley This is why you need me, relieve me Close your eyes and breath deep, breath deep Let me set your mind free till the sunrise"
+];
+
+function speak(phrase){
+    console.log(PHRASES);
+    if(phrase == null){
+        // phrase = getRandomArrayEntry(PHRASES);
+        phrase = "The stars are falling from the sky And you're the reason why The moon is shining on your face And I finally think it's found its place Cause maybe, baby, I just wanna do you, do you Do you wanna do me, do me Underneath the moonlight The moonlight tonight? And now we're hiding in my car I let you see my scars Escape the dark for just one night Your heart makes me explode with light Baby, maybe Maybe I will steal you, steal you Just so I can feel you, feel you Maybe that will heal you, heal you On the inside Underneath the willow tree Wearing nothing else but me Babe, I just wanna do you Do you wanna do me Underneath the moonlight? Hayley, Hayley This is why you need me, relieve me Close your eyes and breath deep, breath deep Let me set your mind free till the sunrise";
+        window.speechSynthesis.speak(new window.SpeechSynthesisUtterance(phrase))
+    }
+}
+
+function getRandomArrayEntry(array){
+    var index = Math.floor(Math.random() * (array.length));
+    return array[index];
+}
