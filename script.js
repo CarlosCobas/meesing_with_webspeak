@@ -16,6 +16,10 @@ function speak(index){
     }
 }
 
+function stopSpeak(){
+    window.speechSynthesis.cancel();
+}
+
 function getRandomArrayEntry(array){
     var index = Math.floor(Math.random() * (array.length));
     return array[index];
